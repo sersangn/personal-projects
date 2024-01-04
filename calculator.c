@@ -4,13 +4,13 @@ int main(void){
     printf("Hello this is a calculator program that does some simple calculations for you \n");
     printf("First input your two numbers \n");
 
-    int number1=0;
-    int number2=0;
+    float number1=0;
+    float number2=0;
     int option=0;
     printf("Input your first number  ");
-    scanf("%d", &number1);
+    scanf("%f", &number1);
     printf("Input your second number  ");
-    scanf("%d", &number2);
+    scanf("%f", &number2);
 
     printf("What would you like to do with these numbers\n\n");
     printf("Your options:\n");
@@ -21,7 +21,7 @@ int main(void){
     
     scanf("%d", &option);
 
-    int returnvalue=0;
+    float returnvalue=0;
 
     switch (option)
     {
@@ -46,6 +46,6 @@ int main(void){
         break;
     }
 
-    printf("Your result %d \n", returnvalue);
+    printf("Your result %f \n", returnvalue);
 
 }
