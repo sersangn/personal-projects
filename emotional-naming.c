@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 #define MAX_EMOTIONS 10;
 
@@ -11,8 +12,11 @@ int main(void){
     char emotion[100];
 
     scanf("%s", emotion);
-    
 
+    for (int i = 0; i < strlen(emotion); i++) {
+        emotion[i] = tolower(emotion[i]);
+    }
+    
     printf("\n\n...Processing...\n\n");
     if(strcmp(emotion,"sad")==0){
         printf("so you are feeling sad (╯•﹏•╰)\n\n");
@@ -22,6 +26,23 @@ int main(void){
     else if (strcmp(emotion,"happy")==0){
         printf("so you are feeling happy ๑(◕‿◕)๑\n\n");
         printf("Glad to hear that :) \n\n");
+    }
+    else if (strcmp(emotion,"bored")==0){
+        printf("So you are feeling bored, Here's a joke to keep you entertained: \n\n");
+        printf("Why do oranges wear sunscreen?\n\n");
+        printf("\n\n");
+        printf("So they don't peel. \n\n");
+
+    }
+    else if (strcmp(emotion,"angry")==0){
+        printf("So you are feeling angry \n\n");
+        printf("Anger is an emotion that harms us more the longer we hold on to it\n\n");
+        printf("Take a deep breath and count down from 10....\n\n");
+    }
+    else if (strcmp(emotion,"tired")==0){
+        printf("So you are feeling tired \n\n");
+        printf("You should take regular rests when you're feeling tired\n\n");
+        printf("Don't push yourself too much!\n\n");
     }
     else{
     printf("So you are feeling %s \n\n", emotion);
